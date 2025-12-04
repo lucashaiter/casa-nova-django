@@ -1,0 +1,24 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+# Model Corretor
+class Corretor(models.Model):
+    nome = models.CharField(max_length=50)
+    creci = models.CharField(max_length=10)
+    telefone = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return self.nome
+    
+# Model Imovel
+class Imovel(models.Model):
+    titulo = models.CharField(max_length=50)
+    descricao = models.TextField()
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
+    foto_principal = models.ImageField(upload_to='imoveis/')
+    disponivel = models.BooleanField(default=True)
+    corretor = models.ForeignKey(Corretor, on_delete=models.CASCADE)
+    criado_por = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    
+    def __str__(self):
+        return self.titulo
