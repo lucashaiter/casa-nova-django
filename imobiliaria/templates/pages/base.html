@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CasaNova Imóveis</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container-base">
+        <header>
+            <h1>CasaNova Imóveis</h1>
+        </header>
+        <main>
+            {% block conteudo %}{% endblock %}
+        </main>
+    </div>
+</body>
+</html>
