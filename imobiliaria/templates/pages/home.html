@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+
+{% block conteudo %}
+<div class="container-add">
+    <a href="{% url "form" %}">Adicionar novo imóvel</a>
+</div>
+<main class="container-main">
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+    {% include "partials/imovel.html" %}
+</main>
+{% endblock %}

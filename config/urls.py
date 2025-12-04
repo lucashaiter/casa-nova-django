@@ -21,7 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('imobiliaria/', include('imobiliaria.urls'))
+    path('', include('imobiliaria.urls'))
 ]
 
 urlpatterns += static(settings.STATIC_URL)
