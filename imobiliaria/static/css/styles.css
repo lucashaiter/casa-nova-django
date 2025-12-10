@@ -1,0 +1,59 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --c1: #304F4C;
+    --c2: #5D7D7A;
+    --c3: #89AAA7;
+    --c4: #FFF;
+}
+
+.header {
+    background-color: var(--c1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+}
+
+.header-logo h1, .header-link a{
+    color: var(--c3);
+    text-decoration: none;
+}
+
+.header-logo h1 {
+    font-size: 2rem;
+}
+
+.header-link a {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-link a:hover {
+    color: var(--c4);
+}
+
+.about {
+    background-color: var(--c2);
+    height: 100vh;
+}
+
+
+
+
+.imovel {
+    background-color: var(--c3);
+    height: 100vh;
+}
+
