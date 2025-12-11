@@ -18,13 +18,26 @@
 <body>
     <header class="header">
         <div class="header-logo">
-            <h1>CasaNova</h1>
+            <a href="{% url 'imobiliaria:imovel-list' %}" style="text-decoration: none;">
+                <h1>CasaNova</h1>
+            </a>
         </div>
+        {% if user.is_authenticated %}
         <div class="header-link">
             <a href="{% url 'imobiliaria:imovel-list' %}#about">sobre</a>
             <a href="{% url 'imobiliaria:imovel-list' %}#imovel">imóveis</a>
             <a href="{% url 'imobiliaria:imovel-create' %}">cadastrar</a>
         </div>
+        <form method="post" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <button type="submit">sair</button>
+        </form>
+        {% else %}  
+        <div class="header-link">
+            <a href="{% url 'login' %}">entrar</a>
+            <a href="{% url 'imobiliaria:registro' %}">registro</a>
+        </div>
+        {% endif %}
     </header>
     {% block content %}
     {% endblock content %}

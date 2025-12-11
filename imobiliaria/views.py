@@ -6,6 +6,7 @@ from .models import Imovel
 from .forms import ImovelForm
 from rest_framework import viewsets
 from .serializers import ImovelSerializer
+from django.contrib.auth.forms import UserCreationForm
 
 class ImovelList(ListView):
     model = Imovel
@@ -57,5 +58,9 @@ class ImovelViewSet(viewsets.ModelViewSet):
             
         return queryset
 
+class RegistroView(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/registro.html'
 
 

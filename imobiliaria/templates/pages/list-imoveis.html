@@ -24,6 +24,7 @@
     </div>
     </section>
 
+    {% if user.is_authenticated %}
     <section class="imovel" id="imovel">
     <div class="imovel-container">
         <div class="imovel-grid">
@@ -35,4 +36,5 @@
         </div>
     </div>
     </section>
+    {% endif %}
 {% endblock content %}
