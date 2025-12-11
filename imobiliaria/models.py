@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from decimal import Decimal
 
 class Corretor(models.Model):
     nome = models.CharField(max_length=150)
@@ -21,3 +22,8 @@ class Imovel(models.Model):
     
     def __str__(self):
         return self.titulo
+    
+    def calcular_comissao(self):
+        if self.preco:
+            return self.preco * Decimal('0.05')
+        return Decimal('0.00')
