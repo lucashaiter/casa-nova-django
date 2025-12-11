@@ -80,13 +80,13 @@ body {
 .imovel-container {
     width: 90rem;
     margin: 0 auto;
-    padding: 2rem ;
+    padding: 6rem ;
 }
 
 .imovel-grid {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .imovel-card {
@@ -133,8 +133,14 @@ body {
     padding: 4rem;
 }
 
+.detail-image {
+    display: flex;
+    justify-content: center;
+}
+
 .detail img {
     max-width: 100%;
+    width: 80%;
     border: 2px solid var(--c3);
     border-radius: 2rem;
     transition: all 0.3s ease-in-out;
@@ -183,7 +189,7 @@ body {
     width: 100%;
     padding: 2rem 0;
     background-color: var(--c3);
-    max-height: 100vh;
+    max-height: 120vh;
     height: 100%;
 }
 
@@ -202,4 +208,40 @@ body {
     color: var(--c1);
     display: flex;
     flex-direction: column;
+    gap: 1rem   
+}
+
+.form form input, .form form textarea, .form form select {
+    border: 2px solid var(--c1);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: var(--c1);
+}
+
+.form form button {
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--c1);
+    color: var(--c3);
+    border-radius: 2rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: 2px solid var(--c1);
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+}
+
+.form form button:hover {
+    background-color: var(--c2);
+    color: var(--c1);
+    border: 2px solid var(--c2);
+}
+
+#id_disponivel {
+    height: 5rem;
 }

@@ -28,7 +28,9 @@
     <div class="imovel-container">
         <div class="imovel-grid">
         {% for imovel in imoveis %}
-            {% include 'partials/imovel.html' %}
+            {% if imovel.disponivel == True and imovel.preco < 500000 %}
+                {% include 'partials/imovel.html' %}
+            {% endif %}
         {% endfor %}
         </div>
     </div>
