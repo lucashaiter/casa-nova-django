@@ -23,7 +23,7 @@ class ImovelCreate(LoginRequiredMixin, CreateView):
     model = Imovel
     form_class = ImovelForm
     template_name = 'pages/form-imoveis.html'
-    success_url = reverse_lazy('imovel-list')
+    success_url = reverse_lazy('imobiliaria:imovel-list')
 
     def form_valid(self, form):
         form.instance.criado_por = self.request.user

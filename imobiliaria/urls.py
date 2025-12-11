@@ -5,7 +5,7 @@ from rest_framework.routers import DefaultRouter
 app_name = 'imobiliaria'
 
 router = DefaultRouter()
-router.register(r'imoveis', ImovelViewSet, basename='imovel')
+router.register(r'imoveis', ImovelViewSet, basename='imovel-api')
 
 urlpatterns = [
     path('', ImovelList.as_view(), name="imovel-list"),
