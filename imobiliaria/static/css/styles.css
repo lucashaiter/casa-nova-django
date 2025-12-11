@@ -9,6 +9,7 @@ body {
     height: 100%;
     font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -73,23 +74,104 @@ body {
 
 .imovel {
     background-color: var(--c3);
-    height: 100vh;
+    height: 100%;
 }
 
 .imovel-container {
     width: 100rem;
     margin: 0 auto;
+    padding: 2rem ;
+}
+
+.imovel-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    padding: 3rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .imovel-card {
+    border-radius: 2rem;
     background-color: var(--c1);
+    height: fit-content;
+    overflow: hidden;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.imovel-card:hover {
+    transform: scale(1.03);
+}
+
+.imovel-card img {
+    max-width: 100%;
+}
+
+.imovel-card h1{
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    color: var(--c3);
+}
+
+.imovel-card span{
+    color: var(--c2);
 }
 
 .footer h1 {
     color: var(--c3);
     font-size: 2rem;
+}
+
+.detail {
+    height: 100%;
+    background-color: var(--c2);
+}
+
+.detail-container {
+    width: 100rem;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.detail img {
+    max-width: 100%;
+    border: 2px solid var(--c3);
+    border-radius: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.detail img:hover {
+    transform: scale(1.03);
+}
+
+.detail-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-text h1{
+    color: var(--c1);
+    font-size: 4rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.detail h1:hover{
+    transform: scale(1.03);
+}
+
+
+.detail-text p {
+    font-size: 3rem;
+}
+
+.detail h2 {
+    color: var(--c3);
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.detail h2:hover{
+    background-color: var(--c1);
+    transform: scale(1.04);
 }

@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<section class="detail">
+    <div class="detail-container">
+        <div class="detail-image">
+            <img src="{{ imovel.foto_principal.url }}">
+        </div>
+        <div class="detail-text">
+            <h1>{{ imovel.titulo }}</h1>
+            <p>{{ imovel.descricao }}</p>
+            <h2>Preço: {{ imovel.preco }}</h2>
+            <h2>Corretor: {{ imovel.corretor }}</h2>
+            <h2>Criador por: {{ imovel.criado_por }}</h2>
+        </div>
+    </div>
+</section>
+{% endblock content %}
