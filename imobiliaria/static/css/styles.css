@@ -183,6 +183,32 @@ body {
     transform: scale(1.04);
 }
 
+.detail-button {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.detail-button a {
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--c1);
+    color: var(--c3);
+    border-radius: 2rem;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    border: 2px solid var(--c1);
+}
+
+.detail-button a:hover {
+    background-color: var(--c3);
+    color: var(--c1);
+    border: 2px solid var(--c2);
+}
+
 .form {
     display: flex;
     justify-content: center;  
@@ -205,7 +231,7 @@ body {
 }
 
 .form form p {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--c1);
     display: flex;
     flex-direction: column;
@@ -245,4 +271,60 @@ body {
 
 #id_disponivel {
     height: 5rem;
+}
+
+.form-section {
+    height: 100vh;
+    background-color: var(--c2);
+    display: flex;
+    justify-content: center;
+}
+
+.form-container-delete {
+    max-width: 120rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem;
+    height: 100%;
+}
+
+.form-container-delete h1 {
+    font-size: 6rem;
+    color: var(--c1);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-container-delete form p {
+    font-size: 4rem;
+    color: var(--c1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+    text-align: center;
+}
+
+.form-container-delete a, .form-container-delete button {
+    padding: 2rem;
+    font-size: 3rem;
+    background-color: var(--c1);
+    color: var(--c3);
+    border-radius: 2rem;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    border: 2px solid var(--c1);
+    cursor: pointer;
+}
+
+.form-container-delete a:hover, .form-container-delete button:hover {
+    background-color: var(--c3);
+    color: var(--c1);
+    border: 2px solid var(--c2);
+}
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }

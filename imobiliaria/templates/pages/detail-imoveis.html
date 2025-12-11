@@ -14,5 +14,10 @@
             <h2>Criador por: {{ imovel.criado_por }}</h2>
         </div>
     </div>
+    <div class="detail-button">
+        <a href="{% url 'imobiliaria:imovel-list' %}" class="btn btn-primary">Voltar para Imóveis</a>
+        <a href="{% url 'imobiliaria:imovel-update' imovel.id %}">Editar</a>
+        <a href="{% url 'imobiliaria:imovel-delete' imovel.id %}">Excluir</a>
+    </div>
 </section>
 {% endblock content %}

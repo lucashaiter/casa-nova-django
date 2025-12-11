@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from .models import Imovel
@@ -28,7 +28,17 @@ class ImovelCreate(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.criado_por = self.request.user
         return super().form_valid(form)
+
+class ImovelUpdate(LoginRequiredMixin, UpdateView):
+    model = Imovel
+    form_class = ImovelForm
+    template_name = 'pages/form-imoveis.html'
+    success_url = reverse_lazy('imobiliaria:imovel-list')
     
+class ImovelDelete(LoginRequiredMixin, DeleteView):
+    model = Imovel
+    template_name = 'pages/confirm-delete.html'
+    success_url = reverse_lazy('imobiliaria:imovel-list') 
     
 class ImovelViewSet(viewsets.ModelViewSet):
     serializer_class = ImovelSerializer

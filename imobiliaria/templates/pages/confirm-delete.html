@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% block content %}
+<section class="form-section">
+    <div class="form-container-delete">
+        <h1>Confirmar Exclusão</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p>Tem certeza que deseja excluir o imóvel "{{ imovel.titulo }}"?</p>
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-danger">Excluir</button>
+                <a href="{% url 'imobiliaria:imovel-list' %}" class="btn btn-secondary">Cancelar</a>
+            </div>   
+        </form>
+    </div>
+</section>
+{% endblock  %}
+
